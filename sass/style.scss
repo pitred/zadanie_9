@@ -11,3 +11,75 @@
 
 // pages / views
 // @import "pages/registration";
+
+
+// sidebar
+.component--nav__h1 {
+    font-family: $brand-fonts;
+    padding-left: $pdd-sidebar;
+    font-size: $h1-font-size;
+    letter-spacing: 3px;
+    color: $lightgrey-color;
+}
+
+.fa-bars {
+    margin-left: 20%;
+}
+
+.component--nav {
+    width: 250px;
+    height: 100%;
+    background-color: $black-color;
+    color: $white-color;
+    position: fixed;
+    font-family: $nav-fonts;
+}
+
+.component--nav__ul {
+    list-style-type: none;
+    line-height: 60px;
+    padding-left: $pdd-sidebar;
+    font-size: 1.6em;
+    color: $grey-color;
+}
+
+.line {
+    border: 1px solid $grey-color;
+}
+
+.manager--info__h2 {
+    color: $grey-color;
+    padding-left: $pdd-sidebar;
+    font-size: $h2-font-size;
+}
+
+.manager--foto {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-left: $pdd-sidebar;
+}
+
+.manager--h3 {
+    padding-right: 20%;
+    float: right;
+    line-height: 40px;
+    color: $blue-color;
+    font-size: $h3-font-size;
+}
+
+// topbar
+.topbar {
+    margin-left: 250px;
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    font-size: $h2-font-size;
+    border-bottom: 1px solid $grey-color;
+}
+
+.topbar--border {
+    border-left: 1px solid $grey-color;
+    text-align: center;
+}
