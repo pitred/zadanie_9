@@ -17,7 +17,7 @@ body {
 }
 
 // sidebar
-.component--nav__h1 {
+.sidebar-nav__h1 {
     font-family: $brand-fonts;
     padding-left: $pdd-sidebar;
     font-size: $h1-font-size;
@@ -29,7 +29,7 @@ body {
     margin-left: 20%;
 }
 
-.component--nav {
+.sidebar-nav {
     width: 250px;
     height: 100%;
     background-color: $black-color;
@@ -39,7 +39,7 @@ body {
     z-index: 1;
 }
 
-.component--nav__ul {
+.sidebar-nav__ul {
     list-style-type: none;
     line-height: 60px;
     padding-left: $pdd-sidebar;
@@ -48,63 +48,67 @@ body {
     cursor: pointer;
 }
 
-.line {
+.line-one {
     border: 1px solid $grey-color;
 }
 
-.manager--info__h2 {
+.manager-info__h2 {
     color: $grey-color;
     padding-left: $pdd-sidebar;
-    font-size: $h2-font-size;
+    font-size: $h3-font-size;
 }
 
-.manager--foto {
+.manager-foto {
     width: 80px;
     height: 80px;
     border-radius: 50%;
     margin-left: $pdd-sidebar;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 
-.manager--h3 {
+.manager-h3 {
     padding-right: 20%;
     float: right;
     line-height: 40px;
     color: $blue-color;
-    font-size: $h3-font-size;
+    font-size: $h4-font-size;
 }
 
 // topbar
 .topbar {
-    
     position: fixed;
     width: 100%;
-    height: 80px;
-    line-height: 80px;
-    font-size: $h2-font-size;
+    height: 70px;
+    line-height: 69px;
+    font-size: $h3-font-size;
     color: $lightgrey-color;
     font-family: $nav-fonts;
-    border-bottom: 1px solid $grey-color;
+    border: 1px solid $grey-color;
     z-index: 0;
     background-color: $white-color;
-
-    .wallet {
-        font-size: $h1-font-size;
-    }
 
     .leo {
         color: $blue-color;
     }
 }
 
-.topbar--border {
+.topbar-border {
     border-left: 1px solid $grey-color;
     text-align: center;
 }
 
-.main--content {
+// main content
+.main-container {
+    padding: 100px 0 0 250px;
+}
+
+.main-content {
     color: $lightgrey-color;
-    margin: 100px -30px 0 220px;
-    width: 88%;
+    margin: 0 auto;
+    width: 95%;
     height: 500px;
     background-color: $white-color;
     box-shadow: 1px 1px 2px 2px $lightgrey-color;
@@ -115,7 +119,7 @@ body {
     }
 }
 
-.line--second {
+.line-second {
     border: 1px solid $lightgrey-color;
 }
 
