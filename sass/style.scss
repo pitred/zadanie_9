@@ -17,22 +17,45 @@ body {
 }
 
 // sidebar
-.sidebar-nav__h1 {
+.sidebar-nav__title {
     font-family: $brand-fonts;
     padding-left: $pdd-sidebar;
     font-size: $h1-font-size;
-    letter-spacing: 3px;
-    color: $lightgrey-color;
+    letter-spacing: 4px;
+    color: $white-color;
+    display: inline-block;
 }
 
-.fa-bars {
-    margin-left: 20%;
+.hamburger {
+    display: inline-block;
+    width: 25px;
+    height: 20px;
+    border: 0;
+    border-top: 2px solid $grey-color;
+    position: relative;
+    left: 55px;
+    cursor: pointer;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-top: 2px solid $grey-color;
+    transform: translateY(6px);
+}
+
+.hamburger::after {
+    transform: translateY(15px);
 }
 
 .sidebar-nav {
     width: 250px;
     height: 100%;
-    background-color: $black-color;
+    background-color: $sidebar-color;
     color: $white-color;
     position: fixed;
     font-family: $nav-fonts;
@@ -41,32 +64,33 @@ body {
 
 .sidebar-nav__ul {
     list-style-type: none;
-    line-height: 60px;
-    padding-left: $pdd-sidebar;
-    font-size: 1.6em;
+    line-height: 50px;
+    padding: 0;
+    font-size: 1.3em;
     color: $grey-color;
     cursor: pointer;
+
+    li {
+        padding-left: $pdd-sidebar;
+    }
 }
 
-.line-one {
-    border: 1px solid $grey-color;
+.your-manager {
+    border-top: 1px solid $lightgrey-color;
 }
 
 .manager-info__h2 {
     color: $grey-color;
     padding-left: $pdd-sidebar;
     font-size: $h3-font-size;
+
 }
 
 .manager-foto {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     margin-left: $pdd-sidebar;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
 }
 
 .manager-h3 {
@@ -74,7 +98,7 @@ body {
     float: right;
     line-height: 40px;
     color: $blue-color;
-    font-size: $h4-font-size;
+    font-size: $h3-font-size;
 }
 
 // topbar
@@ -82,7 +106,7 @@ body {
     position: fixed;
     width: 100%;
     height: 70px;
-    line-height: 69px;
+    line-height: 65px;
     font-size: $h3-font-size;
     color: $lightgrey-color;
     font-family: $nav-fonts;
