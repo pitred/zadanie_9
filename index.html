@@ -1,76 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/Glyphter.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Main Page</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="css/Glyphter.css" />
-  <link rel="stylesheet" href="css/style.css" />
-  <title>Main Page</title>
-</head>
+  <body>
+    <!-- sidebar -->
+    <nav class="sidebar-nav">
+      <h1 class="sidebar-nav__title">Just do it</h1>
+      <a class="hamburger" id="hamburger-menu"></a>
+      <ul class="sidebar-nav__ul">
+        <li>
+          <a class="icon-general" id="general-link"
+            ><span class="space">General</span></a
+          >
+        </li>
+        <li>
+          <a class="icon-details" id="details-link"
+            ><span class="space"> Details</span></a
+          >
+        </li>
+        <li>
+          <a class="icon-links" id="links-link"
+            ><span class="space">Links</span></a
+          >
+        </li>
+        <li>
+          <a class="icon-banners" id="banners-link"
+            ><span class="space">Banners</span></a
+          >
+        </li>
+        <li>
+          <a class="icon-personaldata" id="personaldata-link"
+            ><span class="space">Personal data</span></a
+          >
+        </li>
+        <li>
+          <a class="icon-payout" id="payout-link"
+            ><span class="space">Payout</span></a
+          >
+        </li>
+        <li>
+          <a class="icon-postback" id="postback-link"
+            ><span class="space">Postback</span></a
+          >
+        </li>
+      </ul>
+      <div class="your-manager">
+        <div class="manager-info">
+          <h2 class="manager-info__h2">YOUR MANAGER</h2>
+          <div class="manager">
+            <img class="manager-foto" src="vendor/img/DexterM.jpg" />
+            <h3 class="manager-h3">Dexter M.</h3>
+          </div>
+          <div class="green-dot"></div>
+        </div>
+      </div>
+    </nav>
 
-<body>
-  <!-- sidebar -->
-  <nav class="sidebar-nav">
-    <h1 class="sidebar-nav__title">Just do it</h1>
-    <a class="hamburger" id="hamburger-menu"></a>
-    <ul class="sidebar-nav__ul">
-      <li><a class="icon-general" id="general-link"> &nbsp;General</a></li>
-      <li><a class="icon-details" id="details-link"> &nbsp;Details</a></li>
-      <li><a class="icon-links" id="links-link"> &nbsp;Links</a></li>
-      <li><a class="icon-banners" id="banners-link"> &nbsp;Banners</a></li>
-      <li>
-        <a class="icon-personaldata" id="personaldata-link">
-          &nbsp;Personal data</a>
-      </li>
-      <li><a class="icon-payout" id="payout-link"> &nbsp;Payout</a></li>
-      <li><a class="icon-postback" id="postback-link"> &nbsp;Postback</a></li>
-    </ul>
-    <div class="your-manager">
-      <div class="manager-info">
-        <h2 class="manager-info__h2">YOUR MANAGER</h2>
-        <div class="manager">
-          <img class="manager-foto" src="vendor/img/DexterM.jpg" />
-          <h3 class="manager-h3">Dexter M.</h3>
+    <!-- topbar -->
+    <div class="container-fluid">
+      <div class="topbar">
+        <div class="topbar-border wallet">
+          <a class="icon-wallet"></a><span class="money">$1,500.00 </span>
+          <a class="icon-arrow-down-small"></a>
+        </div>
+        <div class="topbar-border bell">
+          <a class="icon-notification"></a>
+        </div>
+        <div class="orange-dot"></div>
+        <div class="topbar-border login">
+          <a class="icon-login"></a> <span class="leo">Leonardo Dicaprio</span>
+        </div>
+        <div class="topbar-border quit">
+          <a class="icon-quit"></a>
         </div>
       </div>
     </div>
-  </nav>
 
-  <!-- topbar -->
-  <div class="container-fluid">
-    <div class="row topbar">
-      <div class="col-sm-6"></div>
-      <div class="col-sm-2 topbar-border">
-        <i class="icon-wallet"></i> &nbsp;<span class="money">
-          $1,500.00 </span>&nbsp;
-        <i class="icon-arrow-down-small"></i>
+    <!-- content 1 -->
+    <div class="container-fluid main-container">
+      <div class="main-content">
+        <h2>GENERAL STATISTIC</h2>
+        <div class="date-border">
+          <div class="datepick">
+            <div class="border">
+              <input
+                type="date"
+                name="start-date"
+                id="start-date"
+                class="datepick-input__left"
+              />
+              <input
+                type="date"
+                name="end-date"
+                id="end-date"
+                class="datepick-input__right"
+              />
+              <a class="icon-calendar"></a>
+            </div>
+            <a class="icon-refresh"></a>
+            <div class="orange-square"></div>
+          </div>
+        </div>
+
+        <div class="statistic-note">
+          <table class="statistic-note__table1">
+            <tr>
+              <td class="statistic-note__td1">Visit Signups</td>
+              <td class="statistic-note__td2">124</td>
+            </tr>
+            <tr>
+              <td class="statistic-note__td1">FTD</td>
+              <td class="statistic-note__td2">445</td>
+            </tr>
+          </table>
+
+          <table>
+            <tr>
+              <td class="statistic-note__td1">Net deposit</td>
+              <td class="statistic-note__td2">564</td>
+            </tr>
+            <tr>
+              <td class="statistic-note__td1">Turn over</td>
+              <td class="statistic-note__td2">432</td>
+            </tr>
+          </table>
+        </div>
       </div>
-      <div class="col-sm-1 topbar-border">
-        <i class="icon-notification bell"></i>
-      </div>
-      <div class="col-sm-2 topbar-border">
-        <i class="icon-login"></i> &nbsp;<span class="leo">
-          Leonardo Dicaprio
-        </span>
-      </div>
-      <div class="col-sm-1 topbar-border"><i class="icon-quit"></i></div>
     </div>
-  </div>
 
-  <!-- content -->
-  <div class="container-fluid main-container">
-    <div class="main-content">
-      <h1>GENERAL STATISTIC</h1>
-      <div class="line-second"></div>
-      <div class="datepick">
-        <input type="date" name="start-date" id="start-date" /><input type="date" name="end-date" id="end-date" />
-        <a class="icon-refresh"></a>
+    <!-- content 2 -->
+    <div class="container-fluid main-container">
+      <div class="main-content">
+        <h2>LINKS</h2>
+        <div class="links-border">
+          <div class="links-btn1">
+            <button class="orange-btn">+ add new</button>
+          </div>
+          <div class="links-table">
+            <table>
+              <tr>
+                <td>Home page</td>
+                <td><a href="">http://www.homepage.com</a></td>
+              </tr>
+              <tr>
+                <td>Currently offer</td>
+                <td><a href="">http://www.currently.com</a></td>
+              </tr>
+              <tr>
+                <td>Blurpix</td>
+                <td><a href="">http://www.blurpix.com</a></td>
+              </tr>
+              <tr>
+                <td>Your Site</td>
+                <td><a href="">http://www.yoursite.com</a></td>
+              </tr>
+              <tr>
+                <td>Google</td>
+                <td><a href="">http://www.google.com</a></td>
+              </tr>
+              <tr>
+                <td>Facebook</td>
+                <td><a href="">http://www.facebook.com</a></td>
+              </tr>
+              <tr>
+                <td>Dashboard</td>
+                <td><a href="">http://www.dashboard.com</a></td>
+              </tr>
+              <tr>
+                <td>Blurax</td>
+                <td><a href="">http://www.blurax.com</a></td>
+              </tr>
+              <tr>
+                <td>Piece of Wine</td>
+                <td><a href="">http://www.pieceofwine.com</a></td>
+              </tr>
+              <tr>
+                <td>Twitter</td>
+                <td><a href="">http://www.twitter.com</a></td>
+              </tr>
+            </table>
+          </div>
+          <div class="links-btn1">
+            <button class="orange-btn">+ add new</button>
+          </div>
+        </div>
       </div>
-      <div class="line-second"></div>
     </div>
-  </div>
-</body>
-
+  </body>
 </html>
