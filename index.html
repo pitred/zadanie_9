@@ -17,7 +17,7 @@
       <ul class="sidebar-nav__ul">
         <li>
           <a class="icon-general" id="general-link"
-            ><span class="space">General</span></a
+          ><span class="space">General</span></a
           >
         </li>
         <li>
@@ -67,7 +67,7 @@
     <div class="container-fluid">
       <div class="topbar">
         <div class="topbar-border wallet">
-          <a class="icon-wallet"></a><span class="money">$1,500.00 </span>
+          <a class="icon-wallet"></a>$1,500.00
           <a class="icon-arrow-down-small"></a>
         </div>
         <div class="topbar-border bell">
@@ -83,7 +83,7 @@
       </div>
     </div>
 
-    <!-- content 1 -->
+    <!-- general statistic -->
     <div class="container-fluid main-container">
       <div class="main-content">
         <h2>GENERAL STATISTIC</h2>
@@ -135,11 +135,11 @@
       </div>
     </div>
 
-    <!-- content 2 -->
+    <!-- links -->
     <div class="container-fluid main-container2">
       <div class="main-content">
         <h2>LINKS</h2>
-        <div class="links-border">
+        <div class="links-border__top">
           <div class="links-btn1">
             <button class="orange-btn">+ add new</button>
           </div>
@@ -190,6 +190,67 @@
           <div class="links-btn1">
             <button class="orange-btn">+ add new</button>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- personal data -->
+
+    <div class="container-fluid main-container2">
+      <div class="main-content">
+        <h2>PERSONAL DATA</h2>
+        <div class="links-border__top">
+          <form action="" method="post">
+            <div class="field-name">
+              <label for="name">Name</label>
+              <input type="text" name="name" id="name" required>
+            </div>
+            <div class="field-surname">
+            <label for="surname">Surname</label>
+              <input type="text" name="surname" id="surname" required>
+            </div>
+            <div class="field-email">
+            <label for="email">E-mail</label>
+              <input type="email" name="email" id="email" required>
+            </div>
+            <div class="field-phone">
+            <label for="phone">Phone number</label>
+              <input type="tel" name="phone" id="phone" required>
+            </div>
+            <div class="links-border__top"></div>
+            <div class="field-skype">
+            <label for="skype">Skype</label>
+              <input type="text" name="skype" id="skype" required>
+            </div>
+            <div class="field-icq">
+            <label for="icq">ICQ</label>
+              <input type="text" name="icq" id="icq" required>
+            </div>
+            <div class="field-msn">
+            <label for="msn">Msn</label>
+              <input type="text" name="msn" id="msn" required>
+            </div>
+            <div class="links-border__top"></div>
+            <div class="field-wallet">
+            <label for="wallet">Wallet</label>
+              <input type="text" name="wallet" id="wallet" required>
+            </div>
+            <div class="links-border__top"></div>
+            <div class="field-password">
+            <label for="password">Wallet</label>
+              <input type="password" name="password" id="password" required>
+            </div>
+            <div class="field-repeat">
+            <label for="repeat">Wallet</label>
+              <input type="password" name="repeat" id="repeat" required>
+            </div>
+            <div class="links-border__bottom"></div>
+            <div class="links-btn1">
+            <button type="submit" class="orange-btn">Save</button>
+          </div>
+
+          </form>
+
         </div>
       </div>
     </div>
