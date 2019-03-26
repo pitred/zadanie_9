@@ -299,10 +299,50 @@ body {
 }
 
 .chart1 {
-    display: flex;
-    justify-content: center;
+    margin: 0 auto;
     padding-top: 30px;
-    width: 100%;
+    width: 65%;
+}
+
+// details
+.details__div {
+    padding: 30px 0 30px 0;
+}
+
+.details {
+    width: 99%;
+
+    font-size: $h3-font;
+    border-collapse: collapse;
+    margin: 0 auto;
+
+    th {
+        padding: 40px 0 20px 0;
+
+        &:hover {
+            background-color: red;
+        }
+    }
+
+    tr {
+        border-top: 1px solid $lightgrey-color;
+
+        &:hover {
+            background-color: $shadowgrey-color;
+        }
+    }
+
+    tr:nth-last-child(1) {
+        border-bottom: 1px solid $lightgrey-color;
+
+    }
+
+    td {
+        text-align: center;
+        color: $sidebar-color;
+        height: 80px;
+    }
+
 }
 
 // links
@@ -464,10 +504,7 @@ body {
 
     .chart1 {
         display: flex;
-
-        img {
-            width: 100%;
-        }
+        width: 100%;
     }
 
     .statistic-note {
