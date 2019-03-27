@@ -3,15 +3,6 @@
 @import "normalize";
 @import "layout";
 
-// components
-// @import "components/form_field";
-
-// sections
-// @import "sections/registration_form";
-
-// pages / views
-// @import "pages/registration";
-
 body {
     background-color: $body-color;
     font-family: $nav-fonts;
@@ -84,7 +75,6 @@ body {
 
         &:hover {
             background-color: rgba(128, 128, 128, 0.1);
-            color: $lightgrey-color;
             border-left: 5px solid $orange-color;
         }
     }
@@ -92,6 +82,12 @@ body {
     a {
         display: flex;
         align-items: center;
+        text-decoration: none;
+        color: $grey-color;
+
+        &:hover {
+            color: $lightgrey-color;
+        }
     }
 
     .space {
@@ -133,6 +129,13 @@ body {
     position: relative;
     top: -75px;
     left: 75px;
+}
+
+#details-statistic,
+#links,
+#banners,
+#personal-data {
+    padding-top: 100px;
 }
 
 // topbar
@@ -300,41 +303,23 @@ body {
 
 .chart1 {
     margin: 0 auto;
-    padding-top: 30px;
+    padding: 30px 0 50px 0;
     width: 65%;
 }
 
 // details
-.details__div {
-    padding: 30px 0 30px 0;
+.details__table {
+    padding-bottom: 50px;
 }
 
 .details {
     width: 99%;
-
     font-size: $h3-font;
     border-collapse: collapse;
     margin: 0 auto;
 
-    th {
-        padding: 40px 0 20px 0;
-
-        &:hover {
-            background-color: red;
-        }
-    }
-
     tr {
-        border-top: 1px solid $lightgrey-color;
-
-        &:hover {
-            background-color: $shadowgrey-color;
-        }
-    }
-
-    tr:nth-last-child(1) {
         border-bottom: 1px solid $lightgrey-color;
-
     }
 
     td {
@@ -343,6 +328,22 @@ body {
         height: 80px;
     }
 
+}
+
+.details__thead {
+    th {
+        border-radius: 5px;
+        height: 100px;
+
+        &:hover {
+            background-color: $shadowgrey-color;
+            color: $sidebar-color;
+        }
+    }
+}
+
+.details__tr:hover {
+    background-color: $shadowgrey-color;
 }
 
 // links
