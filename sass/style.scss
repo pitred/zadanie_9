@@ -326,7 +326,6 @@ button {
         color: $sidebar-color;
         height: 80px;
     }
-
 }
 
 .details__thead {
@@ -510,7 +509,6 @@ button {
     }
 }
 
-
 // personal data
 .links-border__bottom {
     border-bottom: 1px solid $lightgrey-color;
@@ -606,10 +604,64 @@ button {
         display: flex;
         width: 100%;
     }
+
+    // links
+    .links-table {
+        .icons {
+            display: none;
+        }
+    }
+
+    // banners
+    .links-table2 {
+        .icons2 {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    // personal data
+    .field {
+        width: 500px;
+        display: block;
+        margin: 0 auto;
+        font-size: $h3-font;
+        padding: 8px;
+
+        input {
+            display: block;
+            margin: 0 auto;
+            height: 40px;
+            width: 350px;
+            padding-left: 10px;
+            border-radius: 3px;
+            border: 1px solid $lightgrey-color;
+            font-size: $h3-font;
+        }
+
+        label {
+            font-weight: bold;
+        }
+    }
+
+    .field-space {
+        margin: 30px 0 30px 0;
+    }
+
+    form {
+        .field {
+            width: 100%;
+        }
+    }
+
+    .date-border {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
 @media (max-width: 1030px) {
-
     // links
     .links-table {
         tr {
@@ -640,16 +692,9 @@ button {
     .details__thead {
         display: none;
     }
-
-    form {
-        .field {
-            width: 100%;
-        }
-    }
 }
 
 @media (max-width: 1130px) {
-
     // banners
     .links-table2 {
         tr {
@@ -684,7 +729,6 @@ button {
 }
 
 @media (max-width: 1260px) {
-
     // details
     .details__tr {
         display: block;
