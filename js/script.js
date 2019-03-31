@@ -1,18 +1,7 @@
-var menu = document.getElementById('main-nav');
+var sidebar = document.querySelector('.sidebar-nav');
 var showHideBtn = document.getElementById('hamburger-menu');
 
-function showSidebar() {
-    menu.classList.remove('main-menu__items--hidden');
-}
-
-function hideSidebar() {
-    menu.classList.add('main-menu__items--hidden');
-}
-
 showHideBtn.addEventListener('click', function () {
-    if (menu.classList.contains('main-menu__items--hidden')) {
-        showSidebar();
-    } else {
-        hideSidebar();
-    }
-}, hideSidebar());
+    sidebar.classList.toggle('sidebar-nav--visible');
+    showHideBtn.classList.toggle('hamburger-menu--clicked');
+});

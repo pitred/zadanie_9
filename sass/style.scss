@@ -8,6 +8,11 @@ body {
     font-family: $nav-fonts;
 }
 
+a,
+button {
+    cursor: pointer;
+}
+
 // sidebar
 .sidebar-nav__title {
     font-family: $brand-fonts;
@@ -33,7 +38,7 @@ body {
     top: 35px;
     left: 200px;
     cursor: pointer;
-    z-index: 2;
+    z-index: 10;
 }
 
 .hamburger::before,
@@ -57,7 +62,7 @@ body {
     background-color: $sidebar-color;
     color: $white-color;
     position: fixed;
-    z-index: 1;
+    z-index: 10;
 }
 
 .sidebar-nav__ul {
@@ -76,6 +81,7 @@ body {
         &:hover {
             background-color: rgba(128, 128, 128, 0.1);
             border-left: 5px solid $orange-color;
+            padding-left: 20px;
         }
     }
 
@@ -146,7 +152,7 @@ body {
     font-size: $h2-font;
     color: $lightgrey-color;
     border: 1px solid $lightgrey-color;
-    z-index: 0;
+    z-index: 9;
     background-color: $white-color;
     display: flex;
     justify-content: flex-end;
@@ -267,37 +273,30 @@ body {
 }
 
 .statistic-note {
+    max-width: 900px;
+    margin: 0 auto;
     display: flex;
-    justify-content: center;
-    font-size: $h3-font;
-    padding: 30px 0 30px 0;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px 0;
 
-    .statistic-note__table1 {
-        padding-right: 80px;
-    }
-
-    tr {
-        width: 350px;
+    .statistic-note__item {
+        width: 100%;
+        max-width: 340px;
         height: 40px;
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-between;
+        align-items: center;
         border-bottom: 1px solid $lightgrey-color;
-        font-size: $h3-font;
-    }
 
-    .statistic-note__td1 {
-        width: 250px;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-    }
+        h3 {
+            font-size: $h3-font;
+        }
 
-    .statistic-note__td2 {
-        width: 100px;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        color: $grey-color;
+        span {
+            font-size: $h3-font;
+            color: $grey-color;
+        }
     }
 }
 
@@ -392,19 +391,11 @@ body {
     }
 
     td {
-        padding-left: 20px;
+        padding-left: 60px;
         width: 250px;
         display: flex;
         justify-content: flex-start;
         align-items: center;
-    }
-
-    td:nth-child(1) {
-        font-weight: bold;
-    }
-
-    td:nth-last-child(1) {
-        padding-left: 80px;
 
         a {
             text-decoration: none;
@@ -412,20 +403,113 @@ body {
             cursor: pointer;
         }
     }
+
+    td:nth-child(1) {
+        font-weight: bold;
+    }
+
+    td:nth-last-child(1) {
+        padding-left: 100px;
+    }
+
+    .icons {
+        opacity: 0;
+        letter-spacing: 10px;
+
+        &:hover {
+            opacity: 1;
+
+            .icon-links {
+                color: $orange-color;
+            }
+
+            .icon-trash {
+                color: $grey-color;
+            }
+        }
+    }
+
+    .icons2 {
+        text-align: right;
+        opacity: 0;
+        letter-spacing: 10px;
+
+        &:hover {
+            opacity: 1;
+
+            .icon-links {
+                color: $orange-color;
+            }
+
+            .icon-trash {
+                color: $grey-color;
+            }
+        }
+    }
 }
 
-// .layer {
-//     background-color: $lightgrey-color;
-//     color: #fff;
-//     width: 100%;
-//     height: 100%;
-//     text-align: center;
-//     opacity: 0;
+// banners
+.links-table2 {
+    display: flex;
+    justify-content: center;
 
-//     &:hover {
-//         opacity: 1;
-//     }
-// }
+    tr {
+        width: 800px;
+        height: 60px;
+        display: flex;
+        justify-content: flex-start;
+        border-top: 1px solid $lightgrey-color;
+        font-size: $h3-font;
+
+        &:hover {
+            background-color: $shadowgrey-color;
+        }
+    }
+
+    tr:nth-last-child(1) {
+        border-bottom: 1px solid $lightgrey-color;
+    }
+
+    td {
+        padding-left: 60px;
+        width: 250px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        a {
+            text-decoration: none;
+            color: $blue-color;
+            cursor: pointer;
+        }
+    }
+
+    td:nth-child(1) {
+        font-weight: bold;
+    }
+
+    td:nth-last-child(1) {
+        padding-left: 200px;
+    }
+
+    .icons2 {
+        opacity: 0;
+        letter-spacing: 10px;
+
+        &:hover {
+            opacity: 1;
+
+            .icon-links {
+                color: $orange-color;
+            }
+
+            .icon-trash {
+                color: $grey-color;
+            }
+        }
+    }
+}
+
 
 // personal data
 .links-border__bottom {
@@ -465,7 +549,18 @@ body {
     @include grid("sm");
 
     .sidebar-nav {
-        display: none;
+        width: 250px;
+        height: 100%;
+        background-color: $sidebar-color;
+        color: $white-color;
+        position: fixed;
+        z-index: 10;
+        transition: .3s;
+        left: 0;
+
+        &:not(.sidebar-nav--visible) {
+            left: -250px;
+        }
     }
 
     .hamburger {
@@ -475,9 +570,13 @@ body {
         border: 0;
         border-top: 2px solid $grey-color;
         position: absolute;
-        top: 25px;
-        left: 25px;
         cursor: pointer;
+        transition: .3s;
+
+        &:not(.hamburger-menu--clicked) {
+            left: 25px;
+            top: 25px;
+        }
     }
 
     .hamburger::before,
@@ -507,22 +606,164 @@ body {
         display: flex;
         width: 100%;
     }
+}
 
-    .statistic-note {
-        flex: 1 1 auto;
-        width: 100%;
-        flex-wrap: wrap;
+@media (max-width: 1030px) {
 
-        .statistic-note__table1 {
-            padding: 0 0 30px 0;
+    // links
+    .links-table {
+        tr {
+            display: block;
+            height: auto;
+            width: auto;
+        }
+
+        td {
+            display: block;
+            position: relative;
+            padding-left: 5%;
+            padding-top: 5%;
+            height: 60px;
+            text-align: left;
+
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 20px;
+                width: 30%;
+                padding-right: 10px;
+                white-space: nowrap;
+            }
         }
     }
 
-    .links-table tr {
-        width: 92vw;
+    .details__thead {
+        display: none;
     }
 
-    .main-menu__items--hidden {
+    form {
+        .field {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 1130px) {
+
+    // banners
+    .links-table2 {
+        tr {
+            display: block;
+            height: auto;
+            width: auto;
+        }
+
+        td {
+            display: block;
+            position: relative;
+            padding-left: 5%;
+            padding-top: 5%;
+            height: 60px;
+            text-align: left;
+            width: auto;
+
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 20px;
+                width: 30%;
+                padding-right: 10px;
+                white-space: nowrap;
+            }
+        }
+
+        td:nth-last-child(1) {
+            padding-left: 150px;
+        }
+    }
+}
+
+@media (max-width: 1260px) {
+
+    // details
+    .details__tr {
+        display: block;
+        height: auto;
+
+        td {
+            display: block;
+            position: relative;
+            padding-left: 50%;
+            height: 30px;
+            text-align: left;
+
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 50px;
+                width: 30%;
+                padding-right: 10px;
+                white-space: nowrap;
+            }
+
+            &:nth-of-type(1)::before {
+                content: 'Tracker name';
+                font-weight: bold;
+            }
+
+            &:nth-of-type(2)::before {
+                content: 'Initiated date';
+                font-weight: bold;
+            }
+
+            &:nth-of-type(3)::before {
+                content: 'Visits';
+                font-weight: bold;
+            }
+
+            &:nth-of-type(4)::before {
+                content: 'Unique';
+                font-weight: bold;
+            }
+
+            &:nth-of-type(5)::before {
+                content: 'Signups';
+                font-weight: bold;
+            }
+
+            &:nth-of-type(6)::before {
+                content: 'FTD';
+                font-weight: bold;
+            }
+
+            &:nth-of-type(7)::before {
+                content: 'Depositors';
+                font-weight: bold;
+            }
+
+            &:nth-of-type(8)::before {
+                content: 'Deposits ($)';
+                font-weight: bold;
+            }
+
+            &:nth-of-type(9)::before {
+                content: 'Payout ($)';
+                font-weight: bold;
+            }
+
+            &:nth-of-type(10)::before {
+                content: 'Turnover';
+                font-weight: bold;
+            }
+
+            &:nth-of-type(11)::before {
+                content: 'Deal';
+                font-weight: bold;
+            }
+        }
+    }
+
+    .details__thead {
         display: none;
     }
 }
